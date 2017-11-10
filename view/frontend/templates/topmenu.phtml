@@ -1,0 +1,11 @@
+<nav class="navigation" data-action="navigation">
+    <ul data-mage-init='{"Loewenstark_MegaMenu/topmenu": {}, "menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?php foreach ($block->getCategoryCollection() as $_category): ?>
+            <li class="level-top parent ui-menu-item level<?php echo $block->getLevel($_category) ?><?php if ($block->isActive($_category)): ?> active<?php endif; ?>" data-category-id="<?php echo $_category->getId() ?>">
+                <a class="level-top ui-corner-all level<?php echo $block->getLevel($_category) ?>" href="<?php echo $_category->getUrl() ?>" title="<?php echo $block->escapeHtml($_category->getName()) ?>">
+                    <span class="ui-menu-icon ui-icon ui-icon-carat-1-e"></span><span><?php echo $_category->getName() ?></span>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</nav>

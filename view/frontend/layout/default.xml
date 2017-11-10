@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="store.menu">
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <block class="Loewenstark\MegaMenu\Block\Topmenu" name="megamenu.topmenu" template="topmenu.phtml" />
+    </referenceBlock>
+
+</page>
+
+
